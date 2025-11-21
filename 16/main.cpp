@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+int main() {
+
+    // Two ways to traverse a vector
+    std::vector<int> numbers = {1, 2, 3, 4, 5};
+    // std::vector<int>::iterator ptr = numbers.begin(); 
+    auto ptr = numbers.begin();
+
+    while (ptr != numbers.end()) {
+        std::cout << *ptr << " ";
+        ptr = next(ptr, 1);
+    }
+
+    std::cout << "---" << std::endl;
+
+    int i = 0;
+    do {
+        std::cout << numbers[i] << " ";
+        i++;
+    } while (i < numbers.size())
+
+    std::cout << std::endl << std::endl;
+    return 0;
+}
